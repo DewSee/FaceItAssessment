@@ -1,4 +1,10 @@
+The project uses Gradle 4.10.3.
+
 Run:
+
+$ gradle clean
+
+$ gradle build
 
 $ gradle run
 
