@@ -83,7 +83,7 @@ public class UserControllerTest {
     @Test
     public void updateUser() throws Exception {
         String userJson = "{\"firstName\":\"John\",\"lastName\":\"Doe\",\"nickName\":\"DoeDoe\",\"password\":\"password\",\"email\":\"updatedoe@gmail.com\",\"country\":\"UpdateLand\"}";
-        this.mockMvc.perform(put("/users/updateUser/DoeDoe")
+        this.mockMvc.perform(put("/users/update/DoeDoe")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(userJson)
                 .accept(MediaType.APPLICATION_JSON))
