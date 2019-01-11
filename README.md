@@ -30,6 +30,10 @@ Create a new user:
 
 $ curl -X POST localhost:8080/users -H 'Content-type:application/json' -d '{"firstName":"Jeno","lastName":"Polgar","nickName":"PolgarJeno","password":"password","email":"polgarur@gmail.com","country":"Hungary"}'
 
+Update an existing user:
+
+$ curl -X POST localhost:8080/users/{nickName} -H 'Content-type:application/json' -d '{"firstName":"Jeno","lastName":"Polgar","nickName":"PolgarJeno","password":"password","email":"polgarur@gmail.com","country":"Hungary"}'
+
 Delete user:
 
 curl -X DELETE localhost:8080/users/{nickName}
