@@ -44,7 +44,7 @@ public class UserController {
                 .orElseThrow(() -> new UserNotFoundException(nickName));
     }
 
-    @PutMapping("/users/{nickName}")
+    @PutMapping("/users/updateUser/{nickName}")
     User updateUser(@RequestBody User newUser, @PathVariable String nickName) {
 
         return repository.findById(nickName)
