@@ -32,7 +32,7 @@ $ curl -X POST localhost:8080/users -H 'Content-type:application/json' -d '{"fir
 
 Update an existing user:
 
-$ curl -X POST localhost:8080/users/{nickName} -H 'Content-type:application/json' -d '{"firstName":"Jeno","lastName":"Polgar","nickName":"PolgarJeno","password":"password","email":"polgarur@gmail.com","country":"Hungary"}'
+$ curl -X PUT localhost:8080/users/update/{nickName} -H 'Content-type:application/json' -d '{"firstName":"Jeno","lastName":"Polgar","nickName":"PolgarJeno","password":"password","email":"polgarur@gmail.com","country":"Hungary"}'
 
 Delete user:
 
