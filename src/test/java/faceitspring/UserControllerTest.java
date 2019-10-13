@@ -15,6 +15,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.core.annotation.Order;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
@@ -28,13 +29,14 @@ public class UserControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
-    //Has conflicts with updateUser(), yet to be figured out.
-    //On it's own it runs, but the project doesn't build if both of them exists.
-//    @Test
-//    public void getUser() throws Exception {
-//        this.mockMvc.perform(get("/users/DoeDoe")).andDo(print()).andExpect(status().isOk())
-//                .andExpect(jsonPath("$.email", is("johndoe00@gmail.com")));
-//    }
+//    Has conflicts with updateUser(), yet to be figured out.
+//    On it's own it runs, but the project doesn't build if both of them exists.
+    @Test
+    public void getUser() throws Exception {
+        this.mockMvc.perform(get("/users/JaneJane")).andDo(print()).andExpect(status().isOk())
+                .andExpect(jsonPath("$.email", is("janedoe00@gmail.com")));
+    }
+
     @Test
     public void getUserByCountry() throws Exception {
         this.mockMvc.perform(get("/users/country/USA")).andDo(print()).andExpect(status().isOk())
