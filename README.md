@@ -24,7 +24,7 @@ $ curl -v localhost:8080/users/{nickName}
 
 OR
 
-Go to: http://loalhost/users/{nicknName}
+Go to: http://loalhost/users/{nickName}
 
 Create a new user:
 
