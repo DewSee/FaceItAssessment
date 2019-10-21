@@ -4,12 +4,10 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.springframework.hateoas.ResourceSupport;
 
 @Entity
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
 public class User extends ResourceSupport {
 
@@ -20,6 +18,9 @@ public class User extends ResourceSupport {
     private String password;
     private String email;
     private String country;
+
+    protected User() {
+    }
 
     @Override
     public String toString() {
