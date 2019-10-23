@@ -19,6 +19,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import org.springframework.web.util.NestedServletException;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -63,22 +64,22 @@ public class UserControllerTest {
 
     }
 
-    //Throws exception, which is expected, have to be caught.
-//    @Test
-//    public void addSameUserTwice() throws Exception {
-//        String userJson = "{\"firstName\":\"Test\",\"lastName\":\"Test\",\"nickName\":\"Testy\",\"password\":\"testword\",\"email\":\"test@test.com\",\"country\":\"TestVille\"}";
-//
-//        this.mockMvc.perform(post("/users")
-//                .contentType(MediaType.APPLICATION_JSON)
-//                .content(userJson))
-//                .andExpect(status().isOk());
-//
-//        this.mockMvc.perform(post("/users")
-//                .contentType(MediaType.APPLICATION_JSON)
-//                .content(userJson))
-//                .andExpect(status().is(500));
-//
-//    }
+    @Test(expected = NestedServletException.class)
+    public void addSameUserTwice() throws Exception {
+        String userJson = "{\"firstName\":\"Test\",\"lastName\":\"Test\",\"nickName\":\"Testy\",\"password\":\"testword\",\"email\":\"test@test.com\",\"country\":\"TestVille\"}";
+
+        this.mockMvc.perform(post("/users")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(userJson))
+                .andExpect(status().isOk());
+
+        this.mockMvc.perform(post("/users")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(userJson))
+                .andExpect(status().is(500));
+
+    }
+
     @Test
     public void updateUser() throws Exception {
         String userJson = "{\"firstName\":\"John\",\"lastName\":\"Doe\",\"nickName\":\"DoeDoe\",\"password\":\"password\",\"email\":\"updatedoe@gmail.com\",\"country\":\"UpdateLand\"}";
