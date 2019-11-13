@@ -1,4 +1,4 @@
-package faceitspring;
+package usermanager;
 
 public class UserNotFoundException extends RuntimeException {
 

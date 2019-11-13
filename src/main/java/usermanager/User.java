@@ -1,4 +1,4 @@
-package faceitspring;
+package usermanager;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

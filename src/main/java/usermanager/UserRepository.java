@@ -1,4 +1,4 @@
-package faceitspring;
+package usermanager;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

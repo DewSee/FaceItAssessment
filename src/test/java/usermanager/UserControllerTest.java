@@ -1,4 +1,4 @@
-package faceitspring;
+package usermanager;
 
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.is;

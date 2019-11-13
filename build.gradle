@@ -16,9 +16,9 @@ apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
-mainClassName = 'faceitspring.Main'
+mainClassName = 'usermanager.Main'
 
-group = 'FaceItSpring'
+group = 'UserManager'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
