@@ -1,4 +1,4 @@
-package usermanager;
+package userexceptions;
 
 public class UserAlreadyExistsException extends RuntimeException {
 

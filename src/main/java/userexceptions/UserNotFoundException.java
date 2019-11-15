@@ -1,4 +1,4 @@
-package usermanager;
+package userexceptions;
 
 public class UserNotFoundException extends RuntimeException {
 

@@ -1,5 +1,7 @@
 package usermanager;
 
+import userexceptions.UserAlreadyExistsException;
+import userexceptions.UserNotFoundException;
 import java.util.List;
 import static java.util.stream.Collectors.toList;
 import org.springframework.web.bind.annotation.DeleteMapping;
